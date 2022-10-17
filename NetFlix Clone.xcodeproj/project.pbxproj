@@ -16,6 +16,8 @@
 		443A709228FDABD0003471C9 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A709128FDABD0003471C9 /* UpcomingViewController.swift */; };
 		443A709428FDABED003471C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A709328FDABED003471C9 /* SearchViewController.swift */; };
 		443A709628FDAE76003471C9 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A709528FDAE76003471C9 /* DownloadsViewController.swift */; };
+		443A709D28FDB525003471C9 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A709C28FDB525003471C9 /* CollectionViewTableViewCell.swift */; };
+		443A709F28FDBB2E003471C9 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A709E28FDBB2E003471C9 /* HeroHeaderUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		443A709128FDABD0003471C9 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		443A709328FDABED003471C9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		443A709528FDAE76003471C9 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		443A709C28FDB525003471C9 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		443A709E28FDBB2E003471C9 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,11 @@
 		443A707928FDAA20003471C9 /* NetFlix Clone */ = {
 			isa = PBXGroup;
 			children = (
+				443A709B28FDB4ED003471C9 /* Managers */,
+				443A709A28FDB4DF003471C9 /* Resources */,
+				443A709928FDB4C2003471C9 /* Models */,
+				443A709828FDB4BA003471C9 /* ViewModels */,
+				443A709728FDB4B2003471C9 /* Views */,
 				443A708E28FDAB70003471C9 /* Controllers */,
 				443A707A28FDAA20003471C9 /* AppDelegate.swift */,
 				443A707C28FDAA20003471C9 /* SceneDelegate.swift */,
@@ -82,6 +91,43 @@
 				443A709528FDAE76003471C9 /* DownloadsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		443A709728FDB4B2003471C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				443A709C28FDB525003471C9 /* CollectionViewTableViewCell.swift */,
+				443A709E28FDBB2E003471C9 /* HeroHeaderUIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		443A709828FDB4BA003471C9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		443A709928FDB4C2003471C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		443A709A28FDB4DF003471C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		443A709B28FDB4ED003471C9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +202,8 @@
 			files = (
 				443A709428FDABED003471C9 /* SearchViewController.swift in Sources */,
 				443A707F28FDAA20003471C9 /* MainTabBarViewController.swift in Sources */,
+				443A709D28FDB525003471C9 /* CollectionViewTableViewCell.swift in Sources */,
+				443A709F28FDBB2E003471C9 /* HeroHeaderUIView.swift in Sources */,
 				443A709628FDAE76003471C9 /* DownloadsViewController.swift in Sources */,
 				443A707B28FDAA20003471C9 /* AppDelegate.swift in Sources */,
 				443A707D28FDAA20003471C9 /* SceneDelegate.swift in Sources */,
