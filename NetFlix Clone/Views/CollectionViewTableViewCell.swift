@@ -8,9 +8,9 @@
 import UIKit
 
 class CollectionViewTableViewCell: UITableViewCell {
-
+// статичное свойство идентификатор
     static let identifier = "CollectionViewTableViewCell"
-    
+    // создали коллекшн вью, который будет в ячейке
     private let collectionView: UICollectionView = {
         // настройка ячейки
         let layout = UICollectionViewFlowLayout()
@@ -21,7 +21,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         return collectionView
     }()
     
-    
+    // сделали инициализатор с инициализацией иднтификатора
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .systemPink
