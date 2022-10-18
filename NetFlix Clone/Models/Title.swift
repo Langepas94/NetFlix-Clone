@@ -7,11 +7,11 @@
 
 import Foundation
 // создали модель данных, получаемых из апи
-struct TrendingMoviesResponce: Codable {
-    let results: [Movie]
+struct TrendingTitleResponce: Codable {
+    let results: [Title]
 }
 
-struct Movie: Codable {
+struct Title: Codable {
     let id: Int
     let media_type: String?
     let original_name: String?
