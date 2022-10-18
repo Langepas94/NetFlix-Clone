@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     
-    let sectionTitles: [String] = ["Trending Movies", "Popular", "Trending Tv","Upcoming Movies", "Top Rated"]
+    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top Rated"]
     
     var headerView: HeroHeaderUIView?
 
@@ -38,10 +38,11 @@ class HomeViewController: UIViewController {
         
         // сделали большой хидер (главное место на экране черное пустое)
 //        homeFeedTable.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 350))
-        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 430))
         homeFeedTable.tableHeaderView = headerView
         
-        getTrendsMovies()
+//        getTrendsMovies()
+        getTrendsTvs()
     }
     // настройка навигейшн айтемов
     private func configureNavBar() {
@@ -62,14 +63,23 @@ class HomeViewController: UIViewController {
     }
     
     // свитч, где если результат есть то выдает его, если нет то ошибку
-    private func getTrendsMovies() {
-        ApiCaller.shared.getTrendsMovies { results in
-            switch results {
-            case .success(let movies):
-                print(movies)
-            case .failure(let error):
-                print(error)
-            }
+//    private func getTrendsMovies() {
+//        ApiCaller.shared.getTrendsMovies { results in
+//            switch results {
+//            case .success(let movies):
+//                print(movies)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
+    private func getTrendsTvs() {
+//        ApiCaller.shared.getTrendsTvs { results in
+//
+//        }
+        
+        ApiCaller.shared.getTopRated { results in
+            
         }
     }
 
@@ -105,7 +115,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .bold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.tintColor = .systemBackground
-        header.textLabel?.text = header.textLabel?.text?.lowercased()
+        header.textLabel?.text = header.textLabel?.text?.capitalizedFirstLetter()
+        
     }
     // создание заголовков к секциям из массива
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

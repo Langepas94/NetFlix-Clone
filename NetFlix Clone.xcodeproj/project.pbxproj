@@ -20,6 +20,8 @@
 		443A709F28FDBB2E003471C9 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A709E28FDBB2E003471C9 /* HeroHeaderUIView.swift */; };
 		443A70A128FEA6EA003471C9 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A70A028FEA6EA003471C9 /* ApiCaller.swift */; };
 		443A70A328FEAAFA003471C9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A70A228FEAAFA003471C9 /* Movie.swift */; };
+		443A70A528FEB100003471C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A70A428FEB100003471C9 /* Extensions.swift */; };
+		443A70A728FEB4C1003471C9 /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443A70A628FEB4C1003471C9 /* Tv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		443A709E28FDBB2E003471C9 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		443A70A028FEA6EA003471C9 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		443A70A228FEAAFA003471C9 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		443A70A428FEB100003471C9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		443A70A628FEB4C1003471C9 /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				443A70A228FEAAFA003471C9 /* Movie.swift */,
+				443A70A628FEB4C1003471C9 /* Tv.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 		443A709A28FDB4DF003471C9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				443A70A428FEB100003471C9 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,9 +219,11 @@
 				443A709628FDAE76003471C9 /* DownloadsViewController.swift in Sources */,
 				443A707B28FDAA20003471C9 /* AppDelegate.swift in Sources */,
 				443A707D28FDAA20003471C9 /* SceneDelegate.swift in Sources */,
+				443A70A528FEB100003471C9 /* Extensions.swift in Sources */,
 				443A709228FDABD0003471C9 /* UpcomingViewController.swift in Sources */,
 				443A709028FDAB98003471C9 /* HomeViewController.swift in Sources */,
 				443A70A328FEAAFA003471C9 /* Movie.swift in Sources */,
+				443A70A728FEB4C1003471C9 /* Tv.swift in Sources */,
 				443A70A128FEA6EA003471C9 /* ApiCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
