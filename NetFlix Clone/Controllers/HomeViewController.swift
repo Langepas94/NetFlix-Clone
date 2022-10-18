@@ -40,8 +40,10 @@ class HomeViewController: UIViewController {
 //        homeFeedTable.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 350))
         headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 500))
         homeFeedTable.tableHeaderView = headerView
+        
+        getTrendsMovies()
     }
-    
+    // настройка навигейшн айтемов
     private func configureNavBar() {
         var image = UIImage(named: "netflixLogo")
         image = image?.withRenderingMode(.alwaysOriginal)
@@ -59,7 +61,17 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-
+    // свитч, где если результат есть то выдает его, если нет то ошибку
+    private func getTrendsMovies() {
+        ApiCaller.shared.getTrendsMovies { results in
+            switch results {
+            case .success(let movies):
+                print(movies)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 
 
 }
@@ -85,17 +97,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 30
     }
-    
+    // настройка заголовков к секциям
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else {return}
-        header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+        header.textLabel?.font = .systemFont(ofSize: 18, weight: .bold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.tintColor = .systemBackground
         header.textLabel?.text = header.textLabel?.text?.lowercased()
     }
-    
+    // создание заголовков к секциям из массива
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionTitles[section]
     }
